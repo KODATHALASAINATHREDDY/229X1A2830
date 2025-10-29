@@ -1,0 +1,12 @@
+<p>student works!</p>
+<h2>Add Student</h2>
+<label>Student name</label>
+<input type="text" placeholder="Enter student name" #stuname><br>
+<label>Event Name</label>
+<input type="text" placeholder="Enter activity name" #activity><br><br>
+<button (click)="addStudent(stuname.value, activity.value);
+stuname.value=''; activity.value=''">
+
+Add student
+</button>
+<br>
