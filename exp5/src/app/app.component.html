@@ -1,0 +1,24 @@
+<div class="container">
+<h1>To-Do List</h1>
+<input [(ngModel)]="task" placeholder="Enter a new task" />
+<button style="margin-left:5px ;" (click)="addTask()">Add</button>
+<table *ngIf="tasks.length > 0">
+<thead>
+<tr>
+<th>S.no</th>
+<th>Task</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr *ngFor="let item of tasks; let i = index">
+<td>{{ i + 1 }}</td>
+<td>{{ item }}</td>
+<td>
+<button (click)="removeTask(i)">Remove</button>
+</td>
+
+</tr>
+</tbody>
+</table>
+</div>
